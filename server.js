@@ -62,6 +62,9 @@ const swaggerOptions = {
   apis: ['./routes/*.js'], // Path to route files
 };
 
+app.get('/', (req, res) => {
+  res.redirect('/api-docs'); // Redirect to Swagger UI
+});
 
 const swaggerDocs = swaggerJSDoc(swaggerOptions);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
