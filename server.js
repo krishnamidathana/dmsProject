@@ -25,7 +25,7 @@ app.use(express.json());
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('Connected to MongoDB'.bgYellow.black))
-  .catch(err => console.log('MongoDB connection error:', err .bgRed.black));
+  .catch(err => console.log('MongoDB connection error:', err));
 
 // Swagger setup
 const swaggerOptions = {
