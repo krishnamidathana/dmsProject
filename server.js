@@ -4,6 +4,10 @@ import dotenv from 'dotenv';
 import swaggerUi from 'swagger-ui-express';
 import swaggerJSDoc from 'swagger-jsdoc';
 import colors from 'colors'
+import cors from 'cors';
+import helmet from 'helmet';
+
+
 
 import authRoutes from './routes/authRoutes.js'; 
 import orderRoutes from './routes/orderRoutes.js';
@@ -19,13 +23,17 @@ if (!process.env.MONGO_URI) {
   process.exit(1); // Exit if MONGO_URI is missing
 }
 
+
 const app = express();
+
+app.use(cors());
+app.use(helmet());
 app.use(express.json());
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('Connected to MongoDB'.bgYellow.black))
-  .catch(err => console.log('MongoDB connection error:', err));
+  .catch(err => console.log('MongoDB connection error:', err ));
 
 // Swagger setup
 const swaggerOptions = {
