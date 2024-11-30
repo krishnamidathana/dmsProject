@@ -75,36 +75,44 @@ Ensure the following are installed:
   # API Documentation
  Access detailed API documentation via Swagger UI at /api-docs.
 
-## Core Endpoints
-### User Authentication
+# Core Endpoints
 
-POST /api/auth/login Login
-POST /api/auth/register Register a new user
+## User Authentication
+- **POST** `/api/auth/login` - Login.
+- **POST** `/api/auth/register` - Register a new user.
 
-### Order Management
-   POST /api/orders Create a new order
-   GET /api/orders Get all orders
-   GET /api/orders/{id} Get order by ID
-   PUT /api/orders/{id} Update an order
-   DELETE /api/orders/{id} Delete an order
+---
 
-### Driver Management
-POST /api/drivers Create a new driver
-GET /api/drivers Get all drivers
-GET /api/drivers/{id} Get a driver by driverId
-PUT /api/drivers/{id} Update a driver by driverId
-DELETE /api/drivers/{id} Delete a driver by driverId
+## Order Management
+- **POST** `/api/orders` - Create a new order.
+- **GET** `/api/orders` - Get all orders.
+- **GET** `/api/orders/{id}` - Get an order by ID.
+- **PUT** `/api/orders/{id}` - Update an order.
+- **DELETE** `/api/orders/{id}` - Delete an order.
 
-### Route Management
-POST /api/routes Create a new route
-GET /api/routes Get all routes
-GET /api/routes/{id} Get a route by ID
-PUT /api/routes/{id} Update a route by ID
-DELETE /api/routes/{id} Delete a route by ID
-POST /api/routes/{routeId}/steps Add a step to a route
+---
 
-### Payment Calculation
-GET /api/drivers/{driverId}/payment Calculate payment details for a driver
+## Driver Management
+- **POST** `/api/drivers` - Create a new driver.
+- **GET** `/api/drivers` - Get all drivers.
+- **GET** `/api/drivers/{id}` - Get a driver by `driverId`.
+- **PUT** `/api/drivers/{id}` - Update a driver by `driverId`.
+- **DELETE** `/api/drivers/{id}` - Delete a driver by `driverId`.
+
+---
+
+## Route Management
+- **POST** `/api/routes` - Create a new route.
+- **GET** `/api/routes` - Get all routes.
+- **GET** `/api/routes/{id}` - Get a route by ID.
+- **PUT** `/api/routes/{id}` - Update a route by ID.
+- **DELETE** `/api/routes/{id}` - Delete a route by ID.
+- **POST** `/api/routes/{routeId}/steps` - Add a step to a route.
+
+---
+
+## Payment Calculation
+- **GET** `/api/drivers/{driverId}/payment` - Calculate payment details for a driver.
 
 
 # Project Structure
