@@ -117,15 +117,14 @@ Ensure the following are installed:
 
 # Project Structure
 
-├── dmsProject
-│   ├── controllers       # API controllers
-│   ├── models            # Mongoose models
-│   ├── routes            # API routes
-│   ├── middleware        # Authentication & validation middleware
-│   ├── utils             # Helper functions
-├── .env                  # Environment variables
-├── package.json          # Dependencies and scripts
-└── README.md             # Project documentation
+- **`controllers/`**: Contains logic to process incoming requests and return appropriate responses.
+- **`models/`**: Defines data models and their schemas using Mongoose.
+- **`routes/`**: Maps HTTP routes to the corresponding controller functions.
+- **`middleware/`**: Contains code for request validation, authentication, and other processing steps.
+- **`utils/`**: Includes helper functions for common tasks (e.g., formatting data, sending emails).
+- **`.env`**: Holds sensitive credentials and configurations like database URL, API keys, etc.
+- **`package.json`**: Lists all dependencies, scripts, and metadata about the project.
+- **`server.js`**: Initializes and starts the Express server, configures routes, middleware, and database connection.
 
 
 ## License
