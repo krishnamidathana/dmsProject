@@ -54,12 +54,10 @@ Ensure the following are installed:
 
 ### Steps
 1. Clone the repository:
-   bash
    git clone https://github.com/krishnamidathana/dmsProject.git
    cd dmsProject
 
  2.Install dependencies:
-   bash
    npm install
 
  3.Create an .env file in the root directory with the following:
@@ -84,11 +82,11 @@ POST /api/auth/login Login
 POST /api/auth/register Register a new user
 
 ### Order Management
-POST /api/orders Create a new order
-GET /api/orders Get all orders
-GET /api/orders/{id} Get order by ID
-PUT /api/orders/{id} Update an order
-DELETE /api/orders/{id} Delete an order
+   POST /api/orders Create a new order
+   GET /api/orders Get all orders
+   GET /api/orders/{id} Get order by ID
+   PUT /api/orders/{id} Update an order
+   DELETE /api/orders/{id} Delete an order
 
 ### Driver Management
 POST /api/drivers Create a new driver
